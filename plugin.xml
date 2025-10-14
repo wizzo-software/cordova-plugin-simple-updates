@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="cordova-plugin-simple-updates"
+	version="1.0.0">
+	
+	<name>Simple Updates</name>
+	<description>Simple In-App Updates for Android - Minimal and stable</description>
+	<license>MIT</license>
+	<keywords>cordova,update,play store,android</keywords>
+	
+	<engines>
+		<engine name="cordova-android" version=">=9.0.0" />
+	</engines>
+	
+	<js-module src="www/SimpleUpdates.js" name="SimpleUpdates">
+		<clobbers target="cordova.plugins.SimpleUpdates" />
+	</js-module>
+	
+	<!-- Android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="SimpleUpdates">
+				<param name="android-package" value="com.wizzo.simpleupdates.SimpleUpdates" />
+			</feature>
+		</config-file>
+		
+		<source-file src="src/android/SimpleUpdates.java" target-dir="src/com/wizzo/simpleupdates" />
+		
+		<framework src="com.google.android.play:app-update:2.1.0" />
+		<framework src="androidx.appcompat:appcompat:$ANDROIDX_APPCOMPAT_VERSION" />
+		
+		<preference name="ANDROIDX_APPCOMPAT_VERSION" default="1.6.1" />
+	</platform>
+	
+	<!-- Browser (dummy) -->
+	<platform name="browser">
+		<js-module src="www/SimpleUpdates.js" name="SimpleUpdates">
+			<clobbers target="cordova.plugins.SimpleUpdates" />
+		</js-module>
+	</platform>
+</plugin>
+

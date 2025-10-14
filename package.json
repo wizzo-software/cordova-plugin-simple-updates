@@ -1,0 +1,22 @@
+{
+  "name": "cordova-plugin-simple-updates",
+  "version": "1.0.0",
+  "description": "Simple In-App Updates from Play Store - Minimal and stable",
+  "cordova": {
+    "id": "cordova-plugin-simple-updates",
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "update",
+    "android",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Wizzo",
+  "license": "MIT"
+}
+
