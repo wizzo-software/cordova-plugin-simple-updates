@@ -95,7 +95,7 @@ class SimpleUpdates: CDVPlugin {
         
         // Message label
         let label = UILabel()
-        label.text = "נדרש עדכון לגרסה החדשה (\(storeVersion)) כדי להמשיך להשתמש באפליקציה."
+        label.text = "A new version (\(storeVersion)) is required to continue using the app."
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.textAlignment = .center
         label.textColor = UIColor.black
@@ -104,7 +104,7 @@ class SimpleUpdates: CDVPlugin {
         
         // Update button
         let button = UIButton(type: .system)
-        button.setTitle("עדכן עכשיו", for: .normal)
+        button.setTitle("Update Now", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.backgroundColor = UIColor.systemBlue
         button.setTitleColor(.white, for: .normal)
