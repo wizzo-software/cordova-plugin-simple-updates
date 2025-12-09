@@ -22,8 +22,9 @@ class SimpleUpdates: CDVPlugin {
             appStoreId = argId
         }
         
+        // If APP_STORE_ID not configured, just return NO_UPDATE (don't error - allows Android-only usage)
         guard !appStoreId.isEmpty else {
-            let result = CDVPluginResult(status: .error, messageAs: "APP_STORE_ID not configured")
+            let result = CDVPluginResult(status: .ok, messageAs: "NO_UPDATE")
             self.commandDelegate.send(result, callbackId: command.callbackId)
             return
         }
