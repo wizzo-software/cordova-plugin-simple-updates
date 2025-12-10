@@ -39,21 +39,11 @@
 			<feature name="SimpleUpdates">
 				<param name="ios-package" value="SimpleUpdates" />
 			</feature>
-
-			<preference name="UseSwiftLanguageVersion" default="5" />
-			<preference name="APP_STORE_ID" value="$APP_STORE_ID" />
-
-		</config-file>
-
-		<config-file target="Info.plist" parent="/*">
-			<key>UseSwiftLanguageVersion</key>
-			<string>5</string>
+			<preference name="UseSwiftLanguageVersion" value="5" />
+			<preference name="SwiftVersion" value="5.0" />
 		</config-file>
 		
 		<source-file src="src/ios/SimpleUpdates.swift" />
-		
-		<preference name="APP_STORE_ID" default="" />
-		
 	</platform>
 	
 	<!-- Browser (dummy) -->
